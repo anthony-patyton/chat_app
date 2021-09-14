@@ -11,7 +11,6 @@ const initialState = {
   confirmPassword: '',
   phoneNumber: '',
   avatarURL: '',
-
 }
 
 const Auth = () => {
@@ -30,8 +29,8 @@ const Auth = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    console.log(form)
   }
-  console.log(handleSubmit)
   
   return (
     <div className="auth__form-container">
@@ -43,7 +42,7 @@ const Auth = () => {
               <div className="auth__form-container_fields-content_input">
                 <label htmlfor="fullName">Full Name</label>
                 <input
-                  name="fullname"
+                  name="fullName"
                   type="text"
                   placeholder="Full Name"
                   onChange={handleChange}
@@ -52,7 +51,7 @@ const Auth = () => {
               </div>
             )}
               <div className="auth__form-container_fields-content_input">
-                <label htmlfor="username">UserName</label>
+                <label htmlfor="username">Username</label>
                 <input
                   name="username"
                   type="text"
@@ -63,9 +62,9 @@ const Auth = () => {
               </div>
             {isSignup && (
               <div className="auth__form-container_fields-content_input">
-                <label htmlfor="phonenumber">Phone Number</label>
+                <label htmlfor="phoneNumber">Phone Number</label>
                 <input
-                  name="phonenumber"
+                  name="phoneNumber"
                   type="text"
                   placeholder="Phone Number"
                   onChange={handleChange}
